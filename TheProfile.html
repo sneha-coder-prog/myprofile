@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button id="theme-toggle">🌙 Dark Mode</button>
+
+    <header>
+        <nav>
+            <div class="navbar-container">
+                <div class="logo">
+                    <a href="#">My Portfolio</a>
+                </div>
+    
+                <!-- Navbar Links -->
+                <ul class="navbar">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#faq">FAQs</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+
+        <section id="quote" class="section">
+            <h2>Inspiration of the Day</h2>
+            <p id="random-quote">Loading...</p>
+            <button id="new-quote">Get Another Quote</button>
+        </section>
+        
+        <script>
+            // List of Quotes
+            const quotes = [
+                "Success is not final; failure is not fatal: It is the courage to continue that counts.",
+                "Code is like humor. When you have to explain it, it's bad.",
+                "Don't watch the clock; do what it does. Keep going.",
+                "Simplicity is the soul of efficiency.",
+                "Programming isn't about what you know; it's about what you can figure out.",
+                "The only way to do great work is to love what you do.",
+                "It's not a bug; it's an undocumented feature."
+            ];
+
+            // Function to Get Random Quote
+            function getRandomQuote() {
+                const quoteElement = document.getElementById("random-quote");
+
+                // Apply fade-out effect before changing the text
+                quoteElement.style.opacity = "0";
+
+                setTimeout(() => {
+                    const randomIndex = Math.floor(Math.random() * quotes.length);
+                    quoteElement.innerText = quotes[randomIndex];
+
+                    // Fade-in effect for new text (but background stays visible)
+                    quoteElement.style.opacity = "1";
+                }, 500);
+            }
+
+            // Load a random quote on page load
+            window.onload = getRandomQuote;
+
+            // Change quote when button is clicked
+            document.getElementById("new-quote").addEventListener("click", getRandomQuote);
+
+        </script>
+
+
+
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <div class="about-container section">
+                <img src="D:\OneDrive\Pictures\Screenshots\Screenshot 2025-03-25 221902.png" class="profile-img section">
+                <div class="about-text section">
+                    <p id="typing-text"></p> <!-- Typing effect will run here -->
+                </div>
+            </div>
+
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    const texts = [
+                        "Hello! I'm Sneha Jadhav, a passionate web developer with expertise in building interactive and responsive websites.",
+                        "With experience in HTML, CSS, and JavaScript, I'm excited to work on projects that challenge my creativity.",
+                        "I love creating intuitive and engaging web experiences for users."
+                    ];
+
+                    const typingElement = document.getElementById("typing-text");
+                    let textIndex = 0;
+                    let charIndex = 0;
+
+                    function typeEffect() {
+                        if (textIndex < texts.length) {
+                            if (charIndex < texts[textIndex].length) {
+                                typingElement.innerHTML += texts[textIndex].charAt(charIndex);
+                                charIndex++;
+                                setTimeout(typeEffect, 5); // Typing speed
+                            } else {
+                                // Move to next sentence after a pause
+                                textIndex++;
+                                charIndex = 0;
+                                setTimeout(() => {
+                                    typingElement.innerHTML += "<br>"; // New line
+                                    typeEffect();
+                                }, 1000); // 1-second gap between sentences
+                            }
+                        } else {
+                            // Hide cursor after final text is done
+                            typingElement.classList.add("hide-cursor");
+                        }
+                    }
+
+                    setTimeout(typeEffect, 2000); // Start after 2s delay
+                });
+            </script>
+        
+            <!-- Spinning Wheel Fun Facts -->
+            <section id="fun-wheel" class="section">
+                <h2>🎡 Spin the Wheel for a Fun Fact!</h2>
+                <div id="wheel-container" class="section">
+                    <button id="spin-btn">🎡 Spin</button>
+                </div>
+                <p id="fun-fact">Click the button to reveal a fact!</p>
+            </section>
+        </section>
+        
+        <script>
+        const funFacts = [
+            "🏆 I built my first website when I was 16!",
+            "💡 I love problem-solving and debugging code.",
+            "🌍 I speak 3 languages fluently.",
+            "☕ I drink at least 2 cups of coffee a day!",
+            "🚀 I prefer logic over memorization",
+            "🎨 I enjoy digital painting in my free time!"
+        ];
+
+        document.getElementById("spin-btn").addEventListener("click", function () {
+            this.classList.add("spin-animation");
+
+            setTimeout(() => {
+                const randomFact = funFacts[Math.floor(Math.random() * funFacts.length)];
+                document.getElementById("fun-fact").textContent = randomFact;
+                document.getElementById("fun-fact").style.opacity = "1";
+                this.classList.remove("spin-animation");
+            }, 800);
+        });
+
+        </script>
+        
+        <section id="skills" class="section">
+            <h2>Skills</h2>
+            <div class="skills-container section">
+                <div class="skill-card section" id="html-card">
+                    <h3>HTML</h3>
+                    <div class="progress-bar"><div class="progress" data-width="90%"></div></div>
+                </div>
+                <div class="skill-card section" id="css-card">
+                    <h3>CSS</h3>
+                    <div class="progress-bar"><div class="progress" data-width="80%"></div></div>
+                </div>
+                <div class="skill-card section" id="js-card">
+                    <h3>JavaScript</h3>
+                    <div class="progress-bar"><div class="progress" data-width="70%"></div></div>
+                </div>
+                <div class="skill-card section" id="react-card">
+                    <h3>React</h3>
+                    <div class="progress-bar"><div class="progress" data-width="40%"></div></div>
+                </div>
+            </div>
+
+
+            <script>document.querySelectorAll(".skill-card").forEach((card) => {
+                card.addEventListener("mouseenter", function () {
+                    let progress = this.querySelector(".progress");
+                    let width = progress.getAttribute("data-width");
+                    
+                    setTimeout(() => {
+                        progress.style.width = width;
+                    }, 200); // Delay before filling
+                });
+            
+                card.addEventListener("mouseleave", function () {
+                    this.querySelector(".progress").style.width = "0"; // Reset on hover out
+                });
+            });
+            </script>
+        
+            <!-- Modal for Skill Details -->
+            <div class="modal section" id="skill-modal">
+                <div class="modal-content section">
+                    <span class="close-btn">&times;</span>
+                    <h2 id="skill-title">Skill Title</h2>
+                    <ul id="skill-projects">
+                        <!-- Project list will be inserted here -->
+                    </ul>
+                </div>
+            </div>
+        
+            <section id="tools" class="section">
+                <h2>Technologies I Use</h2>
+                <div class="tools-container section">  <!-- ✅ Fixed -->
+                    <div class="tool">
+                        <img src="D:\OneDrive\Pictures\Screenshots\Screenshot 2025-02-07 115748.png" alt="HTML5">
+                        <p>HTML5</p>
+                    </div>
+                    <div class="tool">
+                        <img src="D:\OneDrive\Pictures\Screenshots\Screenshot 2025-02-07 120124.png" alt="CSS3">
+                        <p>CSS3</p>
+                    </div>
+                    <div class="tool">
+                        <img src="D:\OneDrive\Pictures\Screenshots\Screenshot 2025-02-07 120027.png" alt="JavaScript">
+                        <p>JavaScript</p>
+                    </div>
+                    <div class="tool">
+                        <img src="D:\OneDrive\Pictures\Screenshots\Screenshot 2025-02-07 120224.png" alt="React">
+                        <p>React</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+        
+        
+        
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <div class="projects-container">
+                <div class="project-card" class="section">
+                    <h3>Project 1</h3>
+                    <p>Responsive website built with HTML, CSS, and JavaScript.</p>
+                    <a href="https://github.com/your-project1" target="_blank">View on GitHub</a>
+                </div>
+                <div class="project-card" class="section">
+                    <h3>Project 2</h3>
+                    <p>React-based web application with modern features.</p>
+                    <a href="https://github.com/your-project2" target="_blank">View on GitHub</a>
+                </div>
+                <div class="project-card" class="section">
+                    <h3>Project 3</h3>
+                    <p>Machine Learning model</p>
+                    <a href="https://github.com/your-project2" target="_blank">View on GitHub</a>
+                </div>
+                <div class="project-card" class="section">
+                    <h3>Project 4</h3>
+                    <p>Artificial Neural Networks</p>
+                    <a href="https://github.com/your-project2" target="_blank">View on GitHub</a>
+                </div>
+                <!-- Add more projects here -->
+            </div>
+        </section>
+        
+        <section id="current-next-project" class="section">
+            <h2>My Projects Timeline</h2>
+        
+            <!-- Current Project -->
+            <div class="project-box current-project" class="section">
+                <h3>🚀 Current Project: Portfolio Website v2</h3>
+                <p>Redesigning my portfolio with React & CSS for better UI/UX.</p>
+                <p>Expected Completion: March 2024</p>
+            </div>
+        
+            <!-- Next Project -->
+            <div class="project-box next-project" class="section">
+                <h3>🔜 Next Project: AI-Powered Chatbot</h3>
+                <p>Building an AI chatbot using Python & OpenAI API to help users with coding queries.</p>
+                <p>Planned Start: April 2024</p>
+                
+            </div>
+        </section>
+        
+
+
+        <section id="education" class="section">
+            <h2>🎓 Education</h2>
+            <div class="education-container">
+                <!-- Degree -->
+                <div class="education-item">
+                    <h3>Bachelor in Computer Science</h3>
+                    <p>🏫 Vellore Institute Of Technology | 🎓 Graduated: 2027</p>
+                </div>
+        
+                <!-- Web Development Certification -->
+                <div class="education-item">
+                    <h3>Web Development Certification</h3>
+                    <p>🌐 Online Course | 🏅 Completed: 2025</p>
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- 🔥 ADD FAQs SECTION HERE 🔥 -->
+        <section id="faq" class="section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item" class="section">
+                <h3>What services do you offer?</h3>
+                <p>I specialize in front-end development, UI/UX design, and responsive web development.</p>
+            </div>
+            <div class="faq-item" class="section">
+                <h3>How can I contact you?</h3>
+                <p>You can reach me through my <a href="#contact">contact form</a> or email me at youremail@example.com.</p>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+
+            <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<section id="contact" class="section">
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+
+    <p id="success-message" style="display: none; color: green; font-weight: bold;">
+        Your message has been sent successfully!
+    </p>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+    emailjs.init("ivlBT5ieOi_nOZlRY"); // Initialize EmailJS only once
+
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        let name = document.getElementById("name").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let message = document.getElementById("message").value.trim();
+        let successMessage = document.getElementById("success-message");
+        let submitButton = document.querySelector("#contact-form button");
+
+        if (!name || !email || !message) {
+            alert("Please fill in all fields!");
+            return;
+        }
+
+        let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!emailPattern.test(email)) {
+            alert("Please enter a valid email address!");
+            return;
+        }
+
+        let templateParams = {
+            user_name: name,
+            user_email: email, // Ensure this matches the EmailJS template variable
+            message: message
+        };
+
+        console.log("Sending email with:", templateParams); // Debugging
+
+        // Disable the submit button to prevent multiple clicks
+        submitButton.disabled = true;
+        submitButton.textContent = "Sending...";
+
+        emailjs.send("service_0wa9gig", "template_r255hzi", templateParams, "ivlBT5ieOi_nOZlRY")
+        .then(function(response) {
+            console.log("Email sent successfully!", response.status, response.text);
+            successMessage.style.display = "block";
+            document.getElementById("contact-form").reset();
+            submitButton.disabled = false;
+            submitButton.textContent = "Send Message";
+        }, function(error) {
+            console.error("Failed to send email:", error);
+            alert("Failed to send email. Error: " + error.text);
+            submitButton.disabled = false;
+            submitButton.textContent = "Send Message";
+        });
+    });
+</script>
+
+
+
+
+    </main>
+        <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const themeToggle = document.getElementById("theme-toggle");
+
+    // Check for saved user preference
+    if (localStorage.getItem("theme") === "light") {
+        document.body.classList.remove("dark-mode");
+        themeToggle.textContent = "🌙 Dark Mode";
+    } else {
+        // Default to Dark Mode if no preference is saved
+        document.body.classList.add("dark-mode");
+        themeToggle.textContent = "☀️ Light Mode";
+    }
+
+    // Toggle Dark Mode on button click
+    themeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+
+        if (document.body.classList.contains("dark-mode")) {
+            localStorage.setItem("theme", "dark");
+            themeToggle.textContent = "☀️ Light Mode";
+        } else {
+            localStorage.setItem("theme", "light");
+            themeToggle.textContent = "🌙 Dark Mode";
+        }
+    });
+});
+
+
+        </script>
+        
+        
+    <!-- Back to Top Button -->
+    <button id="backToTop">⬆ Back to Top</button>
+
+        <script>
+            // Select the button
+        const backToTop = document.getElementById("backToTop");
+
+        // Show the button when scrolling down
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) { // Change 300 to a smaller number if needed
+                backToTop.style.display = "block"; // Make it visible
+            } else {
+                backToTop.style.display = "none"; // Hide it when at the top
+            }
+        });
+
+        // Scroll smoothly to the top when clicked
+        backToTop.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+        </script>
+
+        
+        <script>
+            window.addEventListener("load", () => {
+                document.body.classList.add("loaded");
+            });
+
+        </script>
+
+        <script>
+            
+        </script>
+
+
+
+</body>
+<footer id="footer" class="section">
+    <p>Connect with me:</p>
+    <div class="social-links">
+        <a href="https://www.linkedin.com/in/sneha-jadhav-46361328a" target="_blank">LinkedIn</a>
+        <a href="https://github.com" target="_blank">GitHub</a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sneha.milindkumar2023@vitstudent.ac.in" target="_blank">Email</a>
+    </div>
+    <p>&copy; 2025 Sneha. All rights reserved.</p>
+</footer>
+
+</html>

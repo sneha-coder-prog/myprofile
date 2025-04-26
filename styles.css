@@ -1,0 +1,1709 @@
+body {
+    background: #ffffff;
+    color: #222;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+    background: #000000; 
+    color: #ffffff;
+}
+
+.dark-mode #about, 
+.dark-mode #fun-wheel, 
+.dark-mode #skills, 
+.dark-mode #projects, 
+.dark-mode #current-next-project, 
+.dark-mode #education, 
+.dark-mode #faq, 
+.dark-mode #contact {
+    background: #111111;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.dark-mode .skill-card, 
+.dark-mode .project-card, 
+.dark-mode .education-item, 
+.dark-mode .faq-item, 
+.dark-mode .project-box {
+    background: #1a1a1a;
+    color: white;
+    border: 1px solid #333;
+    padding: 15px;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out;
+}
+
+.dark-mode .skill-card:hover, 
+.dark-mode .project-card:hover, 
+.dark-mode .education-item:hover, 
+.dark-mode .faq-item:hover, 
+.dark-mode .project-box:hover {
+    background: #222;
+    transform: scale(1.05);
+}
+
+.dark-mode h1, 
+.dark-mode h2, 
+.dark-mode h3 {
+    color: #1e90ff;
+}
+
+.dark-mode p, 
+.dark-mode .education-item p, 
+.dark-mode .faq-item p, 
+.dark-mode .project-box p {
+    color: white;
+}
+
+.dark-mode #spin-btn {
+    background: #1e90ff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 1s ease-in-out;
+}
+
+.spin-animation {
+    animation: spin 1.2s ease-in-out;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.dark-mode #spin-btn:hover {
+    background: #0a66c2;
+}
+
+.dark-mode input, 
+.dark-mode textarea {
+    background: #1a1a1a;
+    color: white;
+    border: 1px solid #555;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease, border 0.3s ease;
+}
+
+.dark-mode button {
+    background: #1e90ff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.dark-mode button:hover {
+    background: #0a66c2;
+    transform: scale(1.05);
+}
+
+.dark-mode a {
+    color: #1e90ff;
+    text-decoration: underline;
+}
+
+.dark-mode #footer {
+    background: #090909;
+}
+
+#theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 12px 18px;
+    font-size: 16px;
+    font-weight: bold;
+    background: #1e90ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease-in-out;
+    box-shadow: 0 4px 10px rgba(30, 144, 255, 0.3);
+}
+
+#theme-toggle:hover {
+    background: #0a66c2;
+    transform: scale(1.05);
+}
+
+.dark-mode #theme-toggle {
+    background: #ffcc00;
+    color: #000;
+    box-shadow: 0 0 12px rgba(255, 204, 0, 0.7);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+#backToTop:hover {
+    background: #0056b3;
+}
+#backToTop.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+body.loaded {
+    opacity: 1;
+}
+
+
+body {
+    background: #ffffff;
+    color: #222;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+    background: #000000; 
+    color: #ffffff;
+}
+.dark-mode .about-text {
+    color: #dddddd; 
+}
+
+.dark-mode #fun-wheel {
+    background: #111111; 
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.dark-mode #spin-btn {
+    background: #1e90ff; 
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 1s ease-in-out;
+}
+
+.spin-animation {
+    animation: spin 1.2s ease-in-out;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.dark-mode #spin-btn:hover {
+    background: #0a66c2;
+}
+
+.dark-mode #about {
+    background: #111111;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.dark-mode .profile-img {
+    border: 3px solid #1e90ff; 
+}
+
+.dark-mode #fun-wheel {
+    background: #222222;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.dark-mode #spin-btn {
+    background: #1e90ff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 20px;
+    transition: background 0.3s ease-in-out;
+}
+
+.dark-mode #spin-btn:hover {
+    background: #0a66c2;
+}
+
+/* ✨ Dark Mode Text Adjustments */
+.dark-mode h1, 
+.dark-mode h2, 
+.dark-mode h3, 
+.dark-mode a, 
+.dark-mode button {
+    color: #1e90ff;
+}
+
+
+/* 🌓 Dark Mode Toggle Button */
+#theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 12px 18px;
+    font-size: 16px;
+    font-weight: bold;
+    background: #1e90ff; /* Bright blue */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease-in-out;
+    box-shadow: 0 4px 10px rgba(30, 144, 255, 0.3); /* Soft glow */
+}
+
+/* 🎨 Button Hover Effect */
+#theme-toggle:hover {
+    background: #0a66c2; /* Deep blue */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* 🔲 Dark Mode Button Glow Effect */
+.dark-mode #theme-toggle {
+    background: #ffcc00; /* Bright yellow */
+    color: #000;
+    box-shadow: 0 0 12px rgba(255, 204, 0, 0.7); /* Yellow glow */
+}
+
+/* 🎡 Dark Mode for Spin Wheel */
+.dark-mode #fun-wheel {
+    background: #111111;
+}
+
+/* 🌙 Dark Mode (Apply to Skills Section) */
+.dark-mode #skills {
+    background: #111111; /* Dark background for skills section */
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+.dark-mode .skill-card p.skill-description {
+    color: #bbbbbb; /* Light gray for readability */
+}
+.dark-mode .project-box p {
+    color: white; /* Force info text to stay white */
+}
+/* 🎨 Dark Mode for Skill Cards */
+.dark-mode .skill-card {
+    background: #1c1c1c; /* Darker shade */
+    color: #dddddd; /* Light gray for better readability */
+    border: 1px solid #333;
+    padding: 15px;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out;
+}
+
+/* 🔥 Hover Effect for Skill Cards */
+.dark-mode .skill-card:hover {
+    background: #222;
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* 🛠 Dark Mode for Technologies Section */
+.dark-mode #tools {
+    background: #181818; /* Dark background for tech section */
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* ✨ Technologies Icons Dark Mode */
+.dark-mode .tool {
+    background: #1f1f1f;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out;
+}
+
+/* 🌟 Hover Effect for Technologies */
+.dark-mode .tool:hover {
+    background: rgba(30, 144, 255, 0.2);
+    transform: scale(1.05);
+}
+
+/* 🌙 Dark Mode (Apply to Projects Section) */
+.dark-mode #projects {
+    background: #111111; /* Dark background for projects section */
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+/* 🔥 Dark Mode for Individual Project Cards */
+.dark-mode .project-card {
+    background: #1a1a1a;
+    color: white;
+    border: 1px solid #333;
+    padding: 15px;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out;
+}
+
+/* 🌟 Hover Effect for Project Cards */
+.dark-mode .project-card:hover {
+    background: #222;
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* 📌 Dark Mode for Project Timeline */
+.dark-mode #current-next-project {
+    background: #181818;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* 🚀 Dark Mode for Current & Next Project Boxes */
+.dark-mode .project-box {
+    background: #1c1c1c;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    transition: background 0.3s ease-in-out;
+}
+
+/* 🌟 Hover Effect for Timeline Boxes */
+.dark-mode .project-box:hover {
+    background: #222;
+    transform: scale(1.05);
+}
+
+/* 🔗 Dark Mode for Project Links */
+.dark-mode .project-card a {
+    color: #1e90ff; /* Neon blue links */
+}
+
+/* 🛠 Dark Mode for Project Headers */
+.dark-mode h1, 
+.dark-mode h2, 
+.dark-mode h3 {
+    color: #1e90ff; /* Highlighted blue headings */
+}
+
+/* 🌙 Dark Mode (Apply to Education Section) */
+.dark-mode #education {
+    background: #111111; /* Dark background */
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+/* 📚 Dark Mode for Individual Education Items */
+.dark-mode .education-item {
+    background: #1a1a1a; /* Slightly lighter black */
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    transition: background 0.3s ease-in-out;
+}
+
+/* 🌟 Hover Effect for Education Items */
+.dark-mode .education-item:hover {
+    background: #222;
+    transform: scale(1.05);
+}
+
+/* 🔵 Dark Mode for Education Headers */
+.dark-mode h2, 
+.dark-mode h3 {
+    color: #1e90ff; /* Highlighted blue for better visibility */
+}
+
+/* 📜 Dark Mode for Education Paragraphs */
+.dark-mode .education-item p {
+    color: #bbbbbb; /* Light grey for readability */
+}
+
+/* 🌙 Dark Mode (Apply to FAQ Section) */
+.dark-mode #faq {
+    background: #111111; /* Dark background */
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+/* ❓ Dark Mode for Individual FAQ Items */
+.dark-mode .faq-item {
+    background: #1a1a1a; /* Slightly lighter black */
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    transition: background 0.3s ease-in-out;
+}
+
+/* 🌟 Hover Effect for FAQ Items */
+.dark-mode .faq-item:hover {
+    background: #222;
+    transform: scale(1.05);
+}
+
+/* 🔵 Dark Mode for FAQ Headers */
+.dark-mode #faq h2,
+.dark-mode #faq h3 {
+    color: #1e90ff; /* Highlighted blue for better visibility */
+}
+
+/* 📜 Dark Mode for FAQ Paragraphs */
+.dark-mode .faq-item p {
+    color: #bbbbbb; /* Light grey for readability */
+}
+
+/* 🔗 Dark Mode for FAQ Links */
+.dark-mode .faq-item a {
+    color: #1e90ff;
+    text-decoration: underline;
+}
+
+/* 💡 Hover Effect for Links */
+.dark-mode .faq-item a:hover {
+    color: #ffcc00; /* Bright yellow for contrast */
+}
+
+/* 🌙 Dark Mode (Apply to Contact Section) */
+.dark-mode #contact {
+    background: #111111; /* Dark background */
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+/* 📩 Dark Mode for Form Inputs & Textarea */
+.dark-mode input,
+.dark-mode textarea {
+    background: #1a1a1a;
+    color: white;
+    border: 1px solid #555;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease, border 0.3s ease;
+}
+
+/* ✍️ Placeholder Text in Dark Mode */
+.dark-mode input::placeholder,
+.dark-mode textarea::placeholder {
+    color: #bbbbbb; /* Light grey for readability */
+}
+
+/* ✨ Focus Effect for Inputs & Textarea */
+.dark-mode input:focus,
+.dark-mode textarea:focus {
+    border-color: #1e90ff; /* Highlighted blue border */
+    outline: none;
+}
+
+/* 📨 Dark Mode for Submit Button */
+.dark-mode button {
+    background: #1e90ff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+/* 🎨 Hover Effect for Button */
+.dark-mode button:hover {
+    background: #0a66c2;
+    transform: scale(1.05);
+}
+
+
+/* 🛠 Dark Mode for Skills */
+.dark-mode .skill-card {
+    background: #1c1c1c;
+    color: white;
+}
+
+/* 🔥 Dark Mode for Projects */
+.dark-mode .project-card {
+    background: #1a1a1a;
+    color: white;
+    border: 1px solid #333;
+}
+
+/* 📜 Dark Mode for Quote Section */
+.dark-mode #quote {
+    background: #1a1a1a;
+    color: #ffcc00; /* Yellow for emphasis */
+}
+
+/* 📩 Dark Mode for Contact Form */
+.dark-mode input,
+.dark-mode textarea {
+    background: #222;
+    color: white;
+    border: 1px solid #555;
+}
+
+/* 🏆 Footer */
+.dark-mode #footer {
+    background: #090909;
+}
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+.dark-mode #fun-fact {
+    color: white
+}
+.dark-mode .faq-item p {
+    color: white
+}
+.dark-mode .education-item p {
+    color: white
+}
+
+/* No changes to the About Section */
+#about {
+    padding: 60px 20px;
+    background: #f8f9fa; /* Light background for contrast */
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* transition: transform 0.3s ease; */
+    animation: fadeIn 0.8s ease-in-out;
+    transition: box-shadow 0.4s ease-in-out;
+}
+
+#about h2 {
+    color: #007bff;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+#about:hover {
+    box-shadow: 0 0 15px rgba(30, 144, 255, 0.5); /* Soft blue glow */
+    
+}
+
+/* About Section Styling */
+.about-container {
+    display: flex; /* Makes content align in a row */
+    align-items: center; /* Aligns items vertically */
+    gap: 20px; /* Adds space between image and text */
+}
+
+/* Square Profile Image */
+.profile-img {
+    width: 350px; /* Adjust size as needed */
+    height: 350px;
+    border-radius: 0; /* Removes rounded corners for square shape */
+    object-fit: cover; /* Ensures the image is properly fitted */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: -150px;
+    margin-left: 200px;
+}
+
+
+.profile-img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.about-text {
+    max-width: 600px;
+    text-align: left;
+    font-size: 18px;
+    color: #333;
+    margin-left: 100px;
+}
+
+/* Typing Cursor */
+#typing-text::after {
+    content: "|"; /* Cursor */
+    display: inline-block;
+    animation: blink 0.7s infinite;
+}
+
+/* Cursor Blink Effect */
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+/* Hide Cursor After Typing Ends */
+#typing-text.hide-cursor::after {
+    display: none;
+}
+
+/* Hoverable Text */
+#hover-text {
+    font-weight: bold;
+    color: #007bff;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 20px;
+    transition: color 0.3s ease;
+}
+
+#hover-text:hover {
+    color: #0056b3;
+}
+
+/* Fun Wheel Section */
+#fun-wheel {
+    text-align: center;
+    margin-top: 30px;
+    background: white;
+}
+
+/* Wheel Container */
+#wheel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+
+/* Spinning Wheel Button */
+#spin-btn {
+    width: 120px; /* Bigger for better look */
+    height: 120px;
+    background: radial-gradient(circle, #ff5722, #ff8c42);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: 5px solid white;
+    border-radius: 50%; /* Circular shape */
+    cursor: pointer;
+    transition: transform 1s ease-in-out;
+}
+
+/* Spin Animation */
+.spin-animation {
+    transform: rotate(720deg); /* Full spin */
+}
+
+
+
+/* ✨ Hover Effect */
+#spin-btn:hover {
+    background: #ff4500;
+    transform: scale(1.1);
+}
+
+
+/* Fun Fact Text (Initially Hidden) */
+#fun-fact {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+
+/* 🌙 Dark Mode for About Section */
+.dark-mode #about {
+    background: #111;
+    color: white;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+/* 🔥 Dark Mode - Better Text Readability */
+.dark-mode .about-text p {
+    color: #ddd;
+}
+
+/* 🎭 Glowing Border in Dark Mode */
+.dark-mode #about:hover {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6); /* Soft cyan glow */
+}
+
+
+/* 🌙 Dark Mode - Fun Wheel Background */
+.dark-mode #fun-wheel {
+    background: rgba(255, 255, 255, 0.1); /* ✅ Soft gray in dark mode */
+    border-radius: 10px;
+    padding: 15px;
+}
+
+/* 🎡 Dark Mode - Spin Button */
+.dark-mode #spin-btn {
+    background: radial-gradient(circle, #1e90ff, #007bff); /* ✅ Darker blue for better contrast */
+    border: 3px solid white;
+}
+
+/* ✨ Hover Effect for Spin Button in Dark Mode */
+.dark-mode #spin-btn:hover {
+    background: #0056b3;
+    transform: scale(1.1);
+}
+
+/* 📝 Dark Mode - Fun Fact Text */
+.dark-mode #fun-fact {
+    color: white;
+}
+
+
+
+/* Show Fun Facts When Hovering Over Text */
+/*
+#hover-text:hover + #fun-facts {
+    opacity: 1;
+    transform: translateY(0); 
+    visibility: visible;
+}*/
+
+
+/* Smooth Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Projects Section Styling */
+#projects {
+    padding: 50px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+#projects h2 {
+    color: #007bff;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+
+/* 📌 Default Timeline Project Box */
+.project-box {
+    background: white;
+    padding: 20px;
+    margin: 10px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    text-align: left;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 🔥 Hover Effect - Light Mode */
+.project-box:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Soft shadow effect */
+}
+.project-card {
+    background-color: #ffffff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* 🔥 Hover Effect - Light Mode */
+.project-card:hover {
+    background-color: #f1f1f1; /* Light gray on hover */
+    transform: scale(1.05); /* Slightly enlarge */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Soft shadow */
+}
+
+.project-card a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+
+
+/* Skills Section Styling */
+#skills {
+    padding: 50px 20px;
+    background-color: #e9ecef;
+    text-align: center;
+}
+
+#skills h2 {
+    color: #007bff;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.skill-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.skill-card h3 {
+    font-size: 22px;
+    color: #007bff;
+}
+
+.skill-description {
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+    background-color: #f1f1f1;
+}
+
+/* Progress Bar Hidden by Default */
+.progress-bar {
+    width: 100%;
+    background-color: #1a1a2e; /* Dark Navy Background */
+    height: 6px;
+    border-radius: 6px;
+    margin-top: 10px;
+    overflow: hidden;
+    opacity: 0;  /* Initially Hidden */
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Animated Progress Bar with Blue Gradient */
+.progress {
+    height: 100%;
+    width: 0; /* Start at 0 */
+    background: linear-gradient(to right, #00c6ff, #0072ff, #00296b); /* Sky Blue to Deep Blue */
+    border-radius: 6px;
+    transition: width 1.2s ease-in-out;
+}
+
+/* Hover Effects */
+.skill-card:hover .progress-bar {
+    opacity: 1;
+}
+
+.skill-card:hover .progress {
+    width: attr(data-width); /* Uses data attribute for dynamic width */
+    box-shadow: 0 0 10px rgba(0, 162, 255, 0.8); /* Aqua Blue Glow */
+}
+
+/* Neon Glow Effect on Hover */
+.skill-card:hover {
+    border-color: #00a2ff; /* Blue Glow Border */
+    box-shadow: 0 0 15px rgba(0, 162, 255, 0.8); /* Outer Glow */
+}
+.project-card:hover {
+    border-color: #00a2ff; /* Blue Glow Border */
+    box-shadow: 0 0 15px rgba(0, 162, 255, 0.8); /* Outer Glow */
+}
+
+/* Specific Styling for Current & Next Project */
+.current-project {
+    border-left: 5px solid #00c6ff; /* Left Blue Accent */
+    transition: border-left 0.3s ease-in-out;
+}
+
+.next-project {
+    border-left: 5px solid #ff8800; /* Left Orange Accent */
+    transition: border-left 0.3s ease-in-out;
+}
+
+/* On Hover - Make Border Glow */
+.current-project:hover {
+    border-left: 5px solid #00e5ff;
+    box-shadow: 0 0 20px rgba(0, 230, 255, 0.8);
+}
+
+.next-project:hover {
+    border-left: 5px solid #ffbb33;
+    box-shadow: 0 0 20px rgba(255, 136, 0, 0.8);
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 60%;
+    max-width: 600px;
+}
+
+.close-btn {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+}
+
+.close-btn:hover {
+    color: black;
+}
+
+#skill-projects {
+    list-style-type: none;
+    padding: 0;
+}
+
+#skill-projects li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#skill-projects li a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#skill-projects li a:hover {
+    text-decoration: underline;
+}
+
+
+#about, #projects, #skills, #contact {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}
+
+#about h2, #projects h2, #contact h2 , #skills h2{
+    color: #007bff;
+}
+
+/* Skills Section Styles */
+/* #skills {
+    background-color: #e9ecef;
+} */
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill {
+    background-color: #ffffff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    width: 22%;
+    border-radius: 5px;
+}
+
+.skill h3 {
+    color: #007bff;
+}
+
+.skill p {
+    font-size: 14px;
+    color: #333;
+}
+
+/* Project Card Styles */
+.project-card {
+    background-color: #ffffff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+}
+
+.project-card:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+/* Contact Section Styling */
+#contact {
+    padding: 50px 20px;
+    background-color: #e9ecef;
+    text-align: center;
+}
+
+#contact h2 {
+    color: #007bff;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+textarea {
+    height: 150px;
+}
+
+button {
+    padding: 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Education Section Styling */
+#education {
+    padding: 50px 20px;
+    background-color: #e9ecef;
+    text-align: center;
+}
+
+#education h2 {
+    color: #007bff;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.education-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.education-item {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Adding transition for hover effect */
+}
+
+.education-item h3 {
+    color: #007bff;
+    font-size: 22px;
+}
+
+.education-item p {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Hover effect for education items */
+
+
+.education-item:hover {
+    transform: scale(1.02);
+    border-color: #00a2ff; /* Blue Glow Border */
+    box-shadow: 0 0 15px rgba(0, 162, 255, 0.8); /* Outer Glow */
+}
+
+/* Base Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Professional font */
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; /* Light background color */
+}
+
+/* Header Styling */
+header {
+    background-color: #1a1a1a; /* Dark background for contrast */
+    padding: 20px 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo Styling */
+.logo a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+/* Navbar Links */
+.navbar {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin-right: 30px; /* Increased spacing between links */
+}
+
+/* Navbar Link Styling */
+.navbar li a {
+    color: #d1d1d1; /* Soft white/gray color */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+/* Hover Effect */
+.navbar li a:hover {
+    color: #00b0ff; /* Soft blue color on hover */
+    transform: translateY(-3px); /* Slightly raise the link on hover */
+}
+
+/* Mobile Navbar (For Later Use) */
+/* We'll skip this part for now as requested. */
+
+
+/* Button Styling */
+button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+
+/* Footer Section Styling */
+#footer {
+    padding: 30px 20px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social-links a:hover {
+    color: #f8f9fa;
+}
+
+footer p {
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+/* Custom Vertical Scrollbar */
+::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+}
+
+/* Scrollbar Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Light background */
+}
+
+/* Scrollbar Thumb (Draggable Part) */
+::-webkit-scrollbar-thumb {
+    background: #007bff; /* Scrollbar color */
+    border-radius: 5px;
+}
+
+/* Scrollbar Thumb on Hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #0056b3; /* Darker blue on hover */
+}
+
+/* FAQs Section */
+#faq {
+    padding: 50px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+/* FAQ Title */
+#faq h2 {
+    color: #007bff;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+/* FAQ Items */
+.faq-item {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+.faq-item:hover {
+    background-color: #f1f1f1; /* Light gray hover effect */
+    transform: scale(1.05); /* Slightly enlarges */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Soft shadow */
+}
+/* FAQ Question */
+.faq-item h3 {
+    font-size: 20px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+/* FAQ Answer */
+.faq-item p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+}
+#tools {
+    /* padding: 50px 20px; */
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.tool:hover {
+    /* background: rgba(30, 144, 255, 0.2);  */
+    background: rgb(229, 229, 229);
+    transform: scale(1.1); /* Slightly enlarge */
+}
+
+.tools-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tool {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.tool img {
+    width: 60px;
+    height: 60px;
+    transition: transform 0.3s ease;
+}
+
+.tool img:hover {
+    transform: scale(1.1);
+}
+
+/* Quote Section */
+#quote {
+    padding: 50px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+/* Quote Title */
+#quote h2 {
+    color: #007bff;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+/* Quote Text */
+#random-quote {
+    font-size: 20px;
+    font-style: italic;
+    color: #333;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Styling */
+#new-quote {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#new-quote:hover {
+    background-color: #0056b3;
+}
+
+#current-next-project {
+    padding: 50px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+#current-next-project h2 {
+    color: #007bff;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Box Style for Current & Next Projects */
+.project-box {
+    background: white;
+    padding: 20px;
+    margin: 10px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    text-align: left;
+}
+
+/* Current Project */
+.current-project {
+    border-left: 5px solid #007bff;
+}
+
+/* Next Project */
+.next-project {
+    border-left: 5px solid #28a745;
+}
+
+/* Project Titles */
+.project-box h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* Project Description */
+.project-box p {
+    font-size: 16px;
+    color: #333;
+}
+
+
+/* Back to Top Button */
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#backToTop:hover {
+    background: #0056b3;
+}
+
+/* Make it fade in when visible */
+#backToTop.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Page Fade-In Effect */
+body {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: #1a1a2e;
+}
+
+.navbar li {
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.navbar li::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background: #1e90ff; /* Blue highlight */
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.navbar li:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+
+
+
+
+
+
+
+.dark-mode.navbar li {
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.dark-mode.navbar li::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background: #1e90ff; /* Blue highlight */
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.dark-mode.navbar li:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+
+/* 🎭 Quote Section Styling */
+#quote {
+    padding: 50px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+/* 🔥 Hover Effect */
+#quote:hover {
+    transform: scale(1.02);
+    background: rgba(30, 144, 255, 0.1);
+}
+
+/* 📜 Quote Box (Always Visible) */
+#quote-box {
+    background: white; /* ✅ Ensures the box never disappears */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* 📝 Quote Text (Only Text Will Change) */
+#random-quote {
+    font-size: 20px;
+    font-style: italic;
+    color: #333;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* 🎨 Get Another Quote Button */
+#new-quote {
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* 🔥 Button Hover Effect */
+#new-quote:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 🎭 Dark Mode Quote Section Styling */
+.dark-mode #quote {
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 10px;
+    background: #111; /* Dark background */
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1); /* Soft white glow */
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+/* 🔥 Hover Effect */
+.dark-mode #quote:hover {
+    transform: scale(1.02);
+    background: rgba(30, 144, 255, 0.2); /* Subtle blue glow */
+}
+
+/* 📜 Dark Mode Quote Box */
+.dark-mode #quote-box {
+    background: #222; /* Darker gray for contrast */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* White soft glow */
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* 📝 Quote Text (More Readable in Dark Mode) */
+.dark-mode #random-quote {
+    font-size: 20px;
+    font-style: italic;
+    color: black; /* White text for better readability */
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* 🎨 Get Another Quote Button */
+.dark-mode #new-quote {
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #1e90ff; /* Bright blue */
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* 🔥 Button Hover Effect */
+.dark-mode #new-quote:hover {
+    background-color: #0a66c2; /* Darker blue */
+    transform: scale(1.05);
+}
+
+
+
+
+
